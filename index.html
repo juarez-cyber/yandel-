@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca el tesoro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Busca el Tesoro</h1>
+    <h2>Encuentra el tesoro oculto</h2>
+
+    <div class="grid">
+        <div class="cell" onclick="verificar(0)"></div>
+        <div class="cell" onclick="verificar(1)"></div>
+        <div class="cell" onclick="verificar(2)"></div>
+        <div class="cell" onclick="verificar(3)"></div>
+        <div class="cell" onclick="verificar(4)"></div>
+        <div class="cell" onclick="verificar(5)"></div>
+        <div class="cell" onclick="verificar(6)"></div>
+        <div class="cell" onclick="verificar(7)"></div>
+        <div class="cell" onclick="verificar(8)"></div>
+    </div>
+
+    <div id="respuesta"><h3 id="mensaje"></h3></div>
+
+    <div id="boton">
+        <button onclick="reiniciarJuego()">Volver a jugar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

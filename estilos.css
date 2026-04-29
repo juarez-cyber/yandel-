@@ -1,78 +1,92 @@
 body {
     font-family: Arial;
     text-align: center;
-    background-color: rgb(153, 153, 255);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 250px);
-    gap: 35px;
+    grid-template-columns: repeat(3, 150px);
+    gap: 15px;
     justify-content: center;
 }
 
 .cell {
-    width: 250px;
-    height: 200px;
-    background-color: lightblue;
-    border-radius: 6px;
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-button {
-    width: 100px;
-    height: 50px;
-    background-color: rgb(119, 20, 20);
-    border-radius: 6px;
-    text-align: center;
-    text-size-adjust: 15px;
-    color: white;
-    cursor: pointer;
+.empty {
+    background-color: #ccc;
 }
 
 /* Diseño Responsivo */
 @media (max-width: 1080px) {
     body {
-        background-color: #1a1a2e; /* oscuro tipo gamer */
+        background-color: #1a1a2e;
         color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: auto;
+        height: auto;
     }
 
-    h1 {
-        font-size: 1.5em;
+    #titulo {
+        display: flex;
+    }
+
+    #subtitulo {
+        display: flex;
+    }
+
+    #titulo h1 {
+        font-size: 60px;
+    }
+
+    #subtitulo h2 {
+        font-size: 30px;
     }
 
     .grid {
-        grid-template-columns: repeat(3, 1fr); /* flexible */
-        grid-template-rows: repeat(3, 1fr);
-        height: 70vh; /* el grid ocupa casi toda la pantalla */
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(3, 200px);
+        justify-content: left;
+        gap: 5px;
+        padding: 10px;
     }
 
     .cell {
-        width: 100%;
-        height: 100%;
-        background-color: #16213e;
-        border: 2px solid #0f3460;
-        font-size: 1.5em;
-    }
-
-    #respuesta {
+        width: 80%;
+        height: 80%;
+        font-size: 30px;
+        background-color: #7e0b0b;
         color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        border: 2px solid #0f3460;
     }
 
-    #boton {
-        width: 100%;
-        height: 30%;
-        background-color: #e94560;
-        font-size: 1em;
+    .empty {
+        background-color: #0f3460;
     }
 
-    #boton button {
+    button {
+        width: 100px;
+        height: 50px;
+        background-color: rgb(119, 20, 20);
+        border-radius: 6px;
         text-align: center;
+        color: white;
+        cursor: pointer;
+    }
+
+    #footer button {
+        display: flex;
+        justify-content: left;
     }
 }
